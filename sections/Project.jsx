@@ -5,7 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import data from "@/public/Data";
 import { useState, useRef } from "react";
-import { FaChevronLeft, FaChevronRight, FaGithub, FaTimes } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaGithub,
+  FaTimes,
+} from "react-icons/fa";
 
 const Projects = () => {
   const { darkMode } = useTheme();
@@ -19,20 +24,22 @@ const Projects = () => {
   const scroll = (direction) => {
     if (scrollContainerRef.current) {
       const { scrollLeft, clientWidth } = scrollContainerRef.current;
-      const scrollTo = direction === 'left' 
-        ? scrollLeft - clientWidth 
-        : scrollLeft + clientWidth;
-      
+      const scrollTo =
+        direction === "left"
+          ? scrollLeft - clientWidth
+          : scrollLeft + clientWidth;
+
       scrollContainerRef.current.scrollTo({
         left: scrollTo,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
       setShowLeftArrow(scrollLeft > 0);
       setShowRightArrow(scrollLeft < scrollWidth - clientWidth);
     }
@@ -50,7 +57,7 @@ const Projects = () => {
 
   return (
     <div
-    id = "projects"
+      id="projects"
       className={`projects min-h-screen py-20 ${
         darkMode ? "dark-mode" : "light-mode"
       }`}
@@ -70,15 +77,17 @@ const Projects = () => {
         <div className="relative">
           {showLeftArrow && (
             <button
-              onClick={() => scroll('left')}
+              onClick={() => scroll("left")}
               className={`absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full ${
-                darkMode ? 'bg-gray-800/50 text-white' : 'bg-white/50 text-black'
+                darkMode
+                  ? "bg-gray-800/50 text-white"
+                  : "bg-white/50 text-black"
               } hover:bg-blue-500 hover:text-white transition-all duration-300`}
             >
               <FaChevronLeft size={24} />
             </button>
           )}
-          
+
           <div
             ref={scrollContainerRef}
             onScroll={handleScroll}
@@ -94,16 +103,23 @@ const Projects = () => {
                 <div className="flex flex-col h-full">
                   <div className="relative h-[300px] md:h-[400px] rounded-t-xl overflow-hidden">
                     {item.videoId ? (
-                      <div className="w-full h-full relative group cursor-pointer" onClick={() => {
-                        // Check if it's a YouTube video ID or Google Drive link
-                        if (item.videoId.includes('youtube.com') || item.videoId.includes('youtu.be') || !item.videoId.includes('http')) {
-                          // YouTube video - open modal
-                          openModal(item);
-                        } else {
-                          // Google Drive or other link - open in new tab
-                          window.open(item.videoId, '_blank');
-                        }
-                      }}>
+                      <div
+                        className="w-full h-full relative group cursor-pointer"
+                        onClick={() => {
+                          // Check if it's a YouTube video ID or Google Drive link
+                          if (
+                            item.videoId.includes("youtube.com") ||
+                            item.videoId.includes("youtu.be") ||
+                            !item.videoId.includes("http")
+                          ) {
+                            // YouTube video - open modal
+                            openModal(item);
+                          } else {
+                            // Google Drive or other link - open in new tab
+                            window.open(item.videoId, "_blank");
+                          }
+                        }}
+                      >
                         <Image
                           src={item.pic}
                           alt={item.name}
@@ -114,14 +130,20 @@ const Projects = () => {
                         />
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           <div className="bg-red-600 rounded-full p-4 transform group-hover:scale-110 transition-transform duration-300">
-                            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z"/>
+                            <svg
+                              className="w-8 h-8 text-white"
+                              fill="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path d="M8 5v14l11-7z" />
                             </svg>
                           </div>
                         </div>
                         <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                          {item.videoId.includes('youtube.com') || item.videoId.includes('youtu.be') || !item.videoId.includes('http') 
-                            ? "Click to watch demo" 
+                          {item.videoId.includes("youtube.com") ||
+                          item.videoId.includes("youtu.be") ||
+                          !item.videoId.includes("http")
+                            ? "Click to watch demo"
                             : "Click to open video"}
                         </div>
                       </div>
@@ -136,7 +158,7 @@ const Projects = () => {
                       />
                     )}
                   </div>
-                  
+
                   <div className="flex flex-col justify-between flex-grow p-6">
                     <div>
                       <h2
@@ -147,7 +169,7 @@ const Projects = () => {
                         {item.name}
                       </h2>
                     </div>
-                    
+
                     <div className="flex flex-col gap-4">
                       <button
                         onClick={() => openModal(item)}
@@ -168,9 +190,11 @@ const Projects = () => {
 
           {showRightArrow && (
             <button
-              onClick={() => scroll('right')}
+              onClick={() => scroll("right")}
               className={`absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full ${
-                darkMode ? 'bg-gray-800/50 text-white' : 'bg-white/50 text-black'
+                darkMode
+                  ? "bg-gray-800/50 text-white"
+                  : "bg-white/50 text-black"
               } hover:bg-blue-500 hover:text-white transition-all duration-300`}
             >
               <FaChevronRight size={24} />
@@ -182,26 +206,36 @@ const Projects = () => {
       {/* Modal */}
       {isModalOpen && selectedProject && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className={`relative max-w-2xl w-full rounded-2xl p-6 ${
-            darkMode ? "bg-gray-900" : "bg-white"
-          }`}>
-            
+          <div
+            className={`relative max-w-2xl w-full rounded-2xl p-6 ${
+              darkMode ? "bg-gray-900" : "bg-white"
+            }`}
+          >
             <div className="space-y-6">
               <div className="flex flex-col gap-2">
-                <h4 className={`text-3xl font-bold ${
-                  darkMode ? "text-white" : "text-gray-800"
-                }`}>
+                <h4
+                  className={`text-3xl font-bold ${
+                    darkMode ? "text-white" : "text-gray-800"
+                  }`}
+                >
                   {selectedProject.name}
                 </h4>
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
-                  darkMode ? "bg-blue-900/50 text-blue-200" : "bg-blue-100 text-blue-800"
-                }`}>
+                <span
+                  className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                    darkMode
+                      ? "bg-blue-900/50 text-blue-200"
+                      : "bg-blue-100 text-blue-800"
+                  }`}
+                >
                   {selectedProject.tag}
                 </span>
               </div>
-              
+
               <div className="relative h-64 rounded-xl overflow-hidden">
-                {selectedProject.videoId && (selectedProject.videoId.includes('youtube.com') || selectedProject.videoId.includes('youtu.be') || !selectedProject.videoId.includes('http')) ? (
+                {selectedProject.videoId &&
+                (selectedProject.videoId.includes("youtube.com") ||
+                  selectedProject.videoId.includes("youtu.be") ||
+                  !selectedProject.videoId.includes("http")) ? (
                   <iframe
                     src={`https://www.youtube.com/embed/${selectedProject.videoId}?autoplay=0&rel=0`}
                     title={selectedProject.name}
@@ -210,16 +244,27 @@ const Projects = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                ) : selectedProject.videoId && selectedProject.videoId.includes('drive.google.com') ? (
+                ) : selectedProject.videoId &&
+                  selectedProject.videoId.includes("drive.google.com") ? (
                   <div className="w-full h-full flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 rounded-xl">
                     <div className="text-center p-6">
-                      <svg className="w-16 h-16 mx-auto mb-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
+                      <svg
+                        className="w-16 h-16 mx-auto mb-4 text-blue-500"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
                       </svg>
-                      <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Video Demo Available</h3>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">Click the button below to open the video in Google Drive</p>
+                      <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-white">
+                        Video Demo Available
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                        Click the button below to open the video in Google Drive
+                      </p>
                       <button
-                        onClick={() => window.open(selectedProject.videoId, '_blank')}
+                        onClick={() =>
+                          window.open(selectedProject.videoId, "_blank")
+                        }
                         className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-colors duration-300"
                       >
                         Open Video
@@ -235,13 +280,15 @@ const Projects = () => {
                   />
                 )}
               </div>
-              
-              <p className={`text-lg leading-relaxed ${
-                darkMode ? "text-gray-300" : "text-gray-600"
-              }`}>
+
+              <p
+                className={`text-lg leading-relaxed ${
+                  darkMode ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
                 {selectedProject.details}
               </p>
-              
+
               <div className="flex flex-col sm:flex-row justify-end gap-4">
                 <button
                   onClick={closeModal}
@@ -276,38 +323,38 @@ const Projects = () => {
         .scrollbar-thin::-webkit-scrollbar {
           height: 8px;
         }
-        
+
         .scrollbar-thin::-webkit-scrollbar-track {
           background: transparent;
           border-radius: 4px;
         }
-        
+
         .scrollbar-thin::-webkit-scrollbar-thumb {
           background: #3b82f6;
           border-radius: 4px;
         }
-        
+
         .scrollbar-thin::-webkit-scrollbar-thumb:hover {
           background: #2563eb;
         }
-        
+
         @media (max-width: 768px) {
           .projects {
             padding: 2rem 1rem;
           }
-          
+
           h1 {
             font-size: 2.5rem;
           }
-          
+
           .w-\[90\%\] {
             width: 85%;
           }
-          
+
           h2 {
             font-size: 2rem;
           }
-          
+
           p {
             font-size: 1rem;
           }

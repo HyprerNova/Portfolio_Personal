@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "npx prettier . --check",
+    "format:fix": "npx prettier . --write",
+    "pre-commit": "npm run lint:fix && npm run format:fix && git add ."
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
@@ -20,6 +24,7 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "prettier": "^3.7.3",
     "tailwindcss": "^4"
   }
 }

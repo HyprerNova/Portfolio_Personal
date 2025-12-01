@@ -33,7 +33,10 @@ const Navbar = () => {
       }`}
     >
       {/* Navbar Name */}
-      <Link href="/" className="font-bold text-xl ml-2.5 hover:text-blue-500 transition-colors duration-300">
+      <Link
+        href="/"
+        className="font-bold text-xl ml-2.5 hover:text-blue-500 transition-colors duration-300"
+      >
         <Image
           src="/images/NavBar/home.svg"
           alt="Home"
@@ -94,7 +97,9 @@ const Navbar = () => {
         <button
           onClick={toggleDarkMode}
           className={`mt-3 flex items-center justify-center p-2 rounded-full w-full ${
-            darkMode ? "text-white hover:bg-gray-800" : "text-black hover:bg-gray-100"
+            darkMode
+              ? "text-white hover:bg-gray-800"
+              : "text-black hover:bg-gray-100"
           }`}
           aria-label="Toggle Dark Mode"
         >
@@ -136,7 +141,9 @@ const Navbar = () => {
         <button
           onClick={toggleDarkMode}
           className={`ml-5 flex items-center justify-center p-2 rounded-full transition-colors duration-200 ${
-            darkMode ? "text-white hover:bg-gray-800" : "text-black hover:bg-gray-100"
+            darkMode
+              ? "text-white hover:bg-gray-800"
+              : "text-black hover:bg-gray-100"
           }`}
           aria-label="Toggle Dark Mode"
         >

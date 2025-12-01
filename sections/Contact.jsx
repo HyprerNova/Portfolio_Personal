@@ -14,13 +14,13 @@ const Contact = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy email:', err);
+      console.error("Failed to copy email:", err);
     }
   };
 
   return (
     <div
-    id = "contact"
+      id="contact"
       className={`contact min-h-screen py-20 ${
         darkMode ? "dark-mode" : "light-mode"
       }`}
@@ -43,7 +43,9 @@ const Contact = () => {
           }`}
         >
           <div className="flex flex-col items-center space-y-6">
-            <p className={`text-xl ${darkMode ? "text-gray-300" : "text-gray-700"}`}>
+            <p
+              className={`text-xl ${darkMode ? "text-gray-300" : "text-gray-700"}`}
+            >
               Feel free to reach out to me at:
             </p>
             <div className="flex items-center space-x-4">
@@ -70,15 +72,15 @@ const Contact = () => {
           .contact {
             padding: 2rem 1rem;
           }
-          
+
           h1 {
             font-size: 2.5rem;
           }
-          
+
           .contact_container {
             padding: 1.5rem;
           }
-          
+
           .flex.items-center {
             flex-direction: column;
             gap: 1rem;

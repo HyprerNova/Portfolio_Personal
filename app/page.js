@@ -6,11 +6,11 @@ import Contact from "@/sections/Contact";
 export default function Page() {
   return (
     <div>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Contact/>
+      <Navbar />
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }

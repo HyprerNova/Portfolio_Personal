@@ -20,7 +20,7 @@ const Home = () => {
                 darkMode ? "dark:text-white" : "text-black"
               }`}
             >
-              Navneeth
+              Navneeth K S
             </h1>
             <p
               className={`text-xl font-sans mb-8 ${
@@ -28,7 +28,7 @@ const Home = () => {
               }`}
             >
               Here’s to ideas, effort, and everything in between. Welcome to my
-              corner of the internet ! 
+              corner of the internet !
             </p>
             <div className="social_links flex gap-4">
               <a
@@ -75,111 +75,46 @@ const Home = () => {
               </a>
             </div>
           </div>
-                     <div className="home_wrapper_text_above_pic flex-1 flex justify-center">
-             <div className="relative w-80 h-80">
-                               {/* Authentic Doctor Strange Portal Effect - Only visible in dark mode */}
-                {darkMode && (
-                  <>
-                    {/* Main spinning wheel with flame jets */}
-                    <div className="absolute inset-0 rounded-full border-8 border-transparent bg-gradient-to-r from-red-600 via-orange-500 to-red-800 animate-spin-fast opacity-90 shadow-red-500/50"></div>
-                    
-                    {/* Inner energy wheel - reverse spin */}
-                    <div className="absolute inset-4 rounded-full border-6 border-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-red-700 animate-spin-reverse opacity-80 shadow-orange-500/50"></div>
-                    
-                    {/* Core energy wheel - fastest spin */}
-                    <div className="absolute inset-8 rounded-full border-4 border-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-orange-600 animate-spin-ultra-fast opacity-70 shadow-yellow-500/50"></div>
-                    
-                    {/* Removed cardinal flame jets for clean circular portal */}
-                    
-                    {/* Removed diagonal flame jets for round look */}
-                    
-                    {/* Energy particles floating around */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500/20 via-orange-500/20 to-yellow-500/20 animate-energy-particles"></div>
-                    
-                    {/* Portal core glow */}
-                    <div className="absolute inset-12 rounded-full bg-gradient-to-r from-yellow-400/40 via-orange-500/40 to-red-500/40 animate-pulse-fast"></div>
-                  </>
-                )}
-               
-               <Image
-                 src="/images/Me/me.jpeg"
-                 alt="Navneeth"
-                 fill
-                 className={`rounded-full object-cover shadow-2xl border-4 ${
-                   darkMode 
-                     ? "border-red-500 shadow-red-600/70" 
-                     : "border-blue-500"
-                 } transition-all duration-500`}
-                 priority
-               />
-             </div>
-           </div>
-        </div>
-        {/* <div
-          className={`home_wrapper_text_below mt-16 p-6 rounded-xl backdrop-blur-sm ${
-            darkMode
-              ? "dark:bg-black dark:text-white"
-              : "bg-white/50 text-black"
-          } shadow-xl animate-slideFromRight`}
-        >
-          <h3
-            className={`text-2xl font-bold mb-4 text-center ${
-              darkMode ? "dark:text-white" : "text-black"
-            }`}
-          >
-            Tech Stack
-          </h3>
-          <div className="tech_icons flex flex-wrap justify-center gap-6">
-            <div className="tech-icon transform transition-all duration-300 hover:scale-110">
+          <div className="home_wrapper_text_above_pic flex-1 flex justify-center">
+            <div className="relative w-80 h-80">
+              {/* Authentic Doctor Strange Portal Effect - Only visible in dark mode */}
+              {darkMode && (
+                <>
+                  {/* Main spinning wheel with flame jets */}
+                  <div className="absolute inset-0 rounded-full border-8 border-transparent bg-gradient-to-r from-red-600 via-orange-500 to-red-800 animate-spin-fast opacity-90 shadow-red-500/50"></div>
+
+                  {/* Inner energy wheel - reverse spin */}
+                  <div className="absolute inset-4 rounded-full border-6 border-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-red-700 animate-spin-reverse opacity-80 shadow-orange-500/50"></div>
+
+                  {/* Core energy wheel - fastest spin */}
+                  <div className="absolute inset-8 rounded-full border-4 border-transparent bg-gradient-to-r from-yellow-400 via-red-500 to-orange-600 animate-spin-ultra-fast opacity-70 shadow-yellow-500/50"></div>
+
+                  {/* Removed cardinal flame jets for clean circular portal */}
+
+                  {/* Removed diagonal flame jets for round look */}
+
+                  {/* Energy particles floating around */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500/20 via-orange-500/20 to-yellow-500/20 animate-energy-particles"></div>
+
+                  {/* Portal core glow */}
+                  <div className="absolute inset-12 rounded-full bg-gradient-to-r from-yellow-400/40 via-orange-500/40 to-red-500/40 animate-pulse-fast"></div>
+                </>
+              )}
+
               <Image
-                src="/images/Tech/aws.svg"
-                alt="HTML"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="tech-icon transform transition-all duration-300 hover:scale-110">
-              <Image
-                src="/images/Tech/java.svg"
-                alt="CSS"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="tech-icon transform transition-all duration-300 hover:scale-110">
-              <Image
-                src="/images/Tech/postgresql.svg"
-                alt="JavaScript"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="tech-icon transform transition-all duration-300 hover:scale-110">
-              <Image
-                src="/images/Tech/REACT.png"
-                alt="React"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="tech-icon transform transition-all duration-300 hover:scale-110">
-              <Image
-                src="/images/Tech/NODE.png"
-                alt="Node.js"
-                width={40}
-                height={40}
-              />
-            </div>
-            <div className="tech-icon transform transition-all duration-300 hover:scale-110">
-              <Image
-                src="/images/Tech/PYTHON.png"
-                alt="Python"
-                width={40}
-                height={40}
+                src="/images/Me/me.jpeg"
+                alt="Navneeth"
+                fill
+                className={`rounded-full object-cover shadow-2xl border-4 ${
+                  darkMode
+                    ? "border-red-500 shadow-red-600/70"
+                    : "border-blue-500"
+                } transition-all duration-500`}
+                priority
               />
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
 
       <style jsx>{`
@@ -212,7 +147,8 @@ const Home = () => {
         }
 
         @keyframes pulse-fast {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.7;
             transform: scale(1);
           }
@@ -224,7 +160,8 @@ const Home = () => {
 
         /* Flame Jet Animations - Spewing Fire Outward */
         @keyframes flame-jet-1 {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.8;
             transform: translateX(-50%) scaleY(1);
           }
@@ -235,7 +172,8 @@ const Home = () => {
         }
 
         @keyframes flame-jet-2 {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.8;
             transform: translateY(-50%) scaleX(1);
           }
@@ -246,7 +184,8 @@ const Home = () => {
         }
 
         @keyframes flame-jet-3 {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.8;
             transform: translateX(-50%) scaleY(1);
           }
@@ -257,7 +196,8 @@ const Home = () => {
         }
 
         @keyframes flame-jet-4 {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.8;
             transform: translateY(-50%) scaleX(1);
           }
@@ -270,7 +210,8 @@ const Home = () => {
         /* Removed diagonal flame jets keyframes */
 
         @keyframes energy-particles {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.2;
             transform: rotate(0deg) scale(1);
           }
