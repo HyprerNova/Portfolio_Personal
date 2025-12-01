@@ -38,7 +38,7 @@ const About = () => {
                   darkMode ? "text-white" : "text-gray-800"
                 }`}
               >
-                Innovative Thinker | Problem Solver | Tech Enthusiast
+                Passionate Software Engineer | Cloud, DevOps, & Cybersecurity
               </h2>
             </div>
 
@@ -46,7 +46,10 @@ const About = () => {
               className={`text-lg leading-relaxed ${
                 darkMode ? "text-gray-300" : "text-gray-700"
               }`}
-            ></p>
+            >
+              I'm excited to officially begin my journey as an Intern at
+              Netradyne starting January 2026.
+            </p>
           </div>
         </div>
       </div>
