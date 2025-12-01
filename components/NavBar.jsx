@@ -14,8 +14,8 @@ const Navbar = () => {
 
   const sections = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "beyond-the-code", label: "Beyond the code" },
+    { id: "career", label: "Career" },
+    { id: "life", label: "Life" },
     { id: "contact", label: "Contact" },
   ];
 

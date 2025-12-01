@@ -7,8 +7,8 @@ const BeyondTheCode = () => {
 
   return (
     <section
-      id="beyond-the-code"
-      className={`beyond_the_code flex justify-center items-center min-h-screen py-20 ${
+      id="life"
+      className={`life flex justify-center items-center min-h-screen py-20 ${
         darkMode ? "dark-mode" : "light-mode"
       }`}
     >
@@ -19,7 +19,7 @@ const BeyondTheCode = () => {
               darkMode ? "dark:text-white" : "text-black"
             }`}
           >
-            Beyond the code
+            Life
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
