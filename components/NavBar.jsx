@@ -65,7 +65,7 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col list-none gap-3">
-          {["Home", "About", "Projects", "Contact"].map((section) => (
+          {["Home", "About", "Contact"].map((section) => (
             <li key={section} className="relative">
               <a
                 href={`#${section}`}
@@ -110,7 +110,7 @@ const Navbar = () => {
       {/* Desktop Menu and Toggle */}
       <div className="hidden md:flex md:items-center">
         <ul className="flex items-center list-none gap-5">
-          {["Home", "About", "Projects", "Contact"].map((section) => (
+          {["Home", "About", "Contact"].map((section) => (
             <li key={section} className="relative">
               <a
                 href={`#${section}`}
