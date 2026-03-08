@@ -10,8 +10,25 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { darkMode, toggleDarkMode } = useTheme();
 
+  const sections = [
+    { id: "home", label: "Home" },
+    { id: "career", label: "Career" },
+    { id: "achievements", label: "Achievements" },
+    { id: "life", label: "Life" },
+    { id: "contact", label: "Contact" },
+  ];
+
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleNavigation = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false);
   };
 
   return (
@@ -53,36 +70,33 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col list-none gap-3">
-          {["Home", "About", "Projects", "Contact"].map((section) => {
-            const id = section.toLowerCase();
-            return (
-              <li key={section} className="relative">
-                <a
-                  href={`#${id}`}
-                  onClick={() => setMenuOpen(false)}
-                  className={`font-bold text-xl ${
-                    darkMode ? "text-white" : "text-black"
-                  } hover:text-blue-500 transition-colors duration-300 w-full text-left`}
-                  aria-label={`Go to ${section}`}
-                >
-                  {section}
-                </a>
-                <span
-                  className={`block h-0.75 w-0 bg-transparent absolute bottom-[-5px] left-0 transition-all duration-500 ${
-                    darkMode ? "hover:bg-white" : "hover:bg-black"
-                  }`}
-                  style={{ width: "0" }}
-                >
-                  &nbsp;
-                </span>
-                <style jsx>{`
-                  li:hover span {
-                    width: 100%;
-                  }
-                `}</style>
-              </li>
-            );
-          })}
+          {sections.map(({ id, label }) => (
+            <li key={id} className="relative">
+              <a
+                href={`#${id}`}
+                onClick={(e) => handleNavigation(e, id)}
+                className={`font-bold text-xl ${
+                  darkMode ? "text-white" : "text-black"
+                } hover:text-blue-500 transition-colors duration-300 w-full text-left`}
+                aria-label={`Go to ${label}`}
+              >
+                {label}
+              </a>
+              <span
+                className={`block h-0.75 w-0 bg-transparent absolute bottom-[-5px] left-0 transition-all duration-500 ${
+                  darkMode ? "hover:bg-white" : "hover:bg-black"
+                }`}
+                style={{ width: "0" }}
+              >
+                &nbsp;
+              </span>
+              <style jsx>{`
+                li:hover span {
+                  width: 100%;
+                }
+              `}</style>
+            </li>
+          ))}
         </ul>
         {/* Dark Mode Toggle */}
         <button
@@ -101,35 +115,33 @@ const Navbar = () => {
       {/* Desktop Menu and Toggle */}
       <div className="hidden md:flex md:items-center">
         <ul className="flex items-center list-none gap-5">
-          {["Home", "About", "Projects", "Contact"].map((section) => {
-            const id = section.toLowerCase();
-            return (
-              <li key={section} className="relative">
-                <a
-                  href={`#${id}`}
-                  className={`font-bold text-xl ${
-                    darkMode ? "text-white" : "text-black"
-                  } hover:text-blue-500 transition-colors duration-300`}
-                  aria-label={`Go to ${section}`}
-                >
-                  {section}
-                </a>
-                <span
-                  className={`block h-0.75 w-0 bg-transparent absolute bottom-[-5px] left-0 transition-all duration-500 ${
-                    darkMode ? "hover:bg-white" : "hover:bg-black"
-                  }`}
-                  style={{ width: "0" }}
-                >
-                  &nbsp;
-                </span>
-                <style jsx>{`
-                  li:hover span {
-                    width: 100%;
-                  }
-                `}</style>
-              </li>
-            );
-          })}
+          {sections.map(({ id, label }) => (
+            <li key={id} className="relative">
+              <a
+                href={`#${id}`}
+                onClick={(e) => handleNavigation(e, id)}
+                className={`font-bold text-xl ${
+                  darkMode ? "text-white" : "text-black"
+                } hover:text-blue-500 transition-colors duration-300`}
+                aria-label={`Go to ${label}`}
+              >
+                {label}
+              </a>
+              <span
+                className={`block h-0.75 w-0 bg-transparent absolute bottom-[-5px] left-0 transition-all duration-500 ${
+                  darkMode ? "hover:bg-white" : "hover:bg-black"
+                }`}
+                style={{ width: "0" }}
+              >
+                &nbsp;
+              </span>
+              <style jsx>{`
+                li:hover span {
+                  width: 100%;
+                }
+              `}</style>
+            </li>
+          ))}
         </ul>
         <button
           onClick={toggleDarkMode}
@@ -148,3 +160,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

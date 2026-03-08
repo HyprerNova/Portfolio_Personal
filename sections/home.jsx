@@ -60,7 +60,7 @@ const Home = () => {
                 />
               </a>
               <a
-                href="https://github.com/HyprerNova"
+                href="https://github.com/HyprerNova/Navneeth"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg"
