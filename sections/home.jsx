@@ -287,11 +287,11 @@ const Home = () => {
         }
 
         .animate-slideFromTop {
-          animation: slideFromTop 3s ease-out forwards;
+          animation: slideFromTop 5s ease-out forwards;
         }
 
         .animate-slideFromRight {
-          animation: slideFromRight 3s ease-out forwards;
+          animation: slideFromRight 5s ease-out forwards;
         }
 
         @media screen and (max-width: 768px) {

@@ -44,7 +44,9 @@ const Contact = () => {
         >
           <div className="flex flex-col items-center space-y-6">
             <p
-              className={`text-xl ${darkMode ? "text-gray-300" : "text-gray-700"}`}
+              className={`text-xl ${
+                darkMode ? "text-gray-300" : "text-gray-700"
+              }`}
             >
               Feel free to reach out to me at:
             </p>

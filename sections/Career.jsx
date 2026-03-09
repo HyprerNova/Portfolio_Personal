@@ -72,9 +72,7 @@ const About = () => {
                   darkMode ? "text-gray-300" : "text-gray-700"
                 }`}
               >
-                Right now, I'm working as a DevOps Intern at Netradyne. Learning
-                opportunities are endless here and I'm grateful for the
-                experience.
+                Loving the limitless learning opportunities as a DevOps Intern at Netradyne.
               </p>
             </div>
 
