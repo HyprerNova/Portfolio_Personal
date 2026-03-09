@@ -8,8 +8,10 @@ const Achievements = () => {
 
   const achievements = [
     {
-      title: "Dynamic Kannada Sign Language Recognition on Resource Constrained Devices",
-      subtitle: "Research paper published in Springer Nature – Scientific Reports (2026)",
+      title:
+        "Dynamic Kannada Sign Language Recognition on Resource Constrained Devices",
+      subtitle:
+        "Research paper published in Springer Nature – Scientific Reports (2026)",
       description:
         "Co-authored a paper that designs and deploys efficient deep learning models (LSTM, BiLSTM, Transformer) for Kannada Sign Language recognition on resource-constrained devices using TinyML and quantization.",
       link: "https://www.nature.com/articles/s41598-026-40181-7",
@@ -119,4 +121,3 @@ const Achievements = () => {
 };
 
 export default Achievements;
-

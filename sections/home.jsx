@@ -27,7 +27,7 @@ const Home = () => {
                 darkMode ? "dark:text-white" : "text-black"
               }`}
             >
-              Here’s to ideas, effort, and everything in between. 
+              Here’s to ideas, effort, and everything in between.
             </p>
             <div className="social_links flex gap-4">
               <a

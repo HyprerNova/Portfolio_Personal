@@ -35,7 +35,9 @@ const Life = () => {
               darkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
-            Outside of work, I love to run, read books and hit the gym. One of my favorite hobbies is playing with remote controlled helicopters and cars.
+            Outside of work, I love to run, read books and hit the gym. One of
+            my favorite hobbies is playing with remote controlled helicopters
+            and cars.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-6">
