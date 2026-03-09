@@ -35,10 +35,7 @@ const Life = () => {
               darkMode ? "text-gray-300" : "text-gray-700"
             }`}
           >
-            Outside of software development, I am dedicated to physical and
-            mental growth. I am an enthusiastic reader and I enjoy hitting the
-            gym. I also have an insatiable curiosity for travel and exploring
-            new places !!
+            Outside of work, I love to run, read books and hit the gym. One of my favorite hobbies is playing with remote controlled helicopters and cars.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-6">
@@ -79,46 +76,6 @@ const Life = () => {
             >
               Visit my YouTube channel
             </a>
-
-            <div className="mt-6 flex flex-col items-center gap-3">
-              <p
-                className={`text-sm ${
-                  darkMode ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Connect with me on social media
-              </p>
-              <div className="flex gap-5">
-                <a
-                  href="https://www.instagram.com/nuclear_navneeth/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg"
-                >
-                  <Image
-                    src="/images/SocialMedia/instagram.png"
-                    alt="Instagram"
-                    width={40}
-                    height={40}
-                    className="rounded-lg"
-                  />
-                </a>
-                <a
-                  href="https://www.youtube.com/@HardCode_101"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transform transition-all duration-300 hover:scale-110 hover:shadow-lg"
-                >
-                  <Image
-                    src="/images/SocialMedia/youtube.png"
-                    alt="YouTube"
-                    width={40}
-                    height={40}
-                    className="rounded-lg"
-                  />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
