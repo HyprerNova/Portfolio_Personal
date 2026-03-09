@@ -16,7 +16,7 @@ const Home = () => {
         <div className="home_wrapper_text_above flex animate-slideFromTop  items-center gap-12">
           <div className="home_wrapper_text_above_text flex-1">
             <h1
-              className={`text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ${
+              className={`text-6xl font-extrabold mb-6 whitespace-nowrap bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ${
                 darkMode ? "dark:text-white" : "text-black"
               }`}
             >

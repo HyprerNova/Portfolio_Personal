@@ -72,7 +72,8 @@ const About = () => {
                   darkMode ? "text-gray-300" : "text-gray-700"
                 }`}
               >
-                Loving the limitless learning opportunities as a DevOps Intern at Netradyne.
+                Loving the limitless learning opportunities as a DevOps Intern
+                at Netradyne.
               </p>
             </div>
 
