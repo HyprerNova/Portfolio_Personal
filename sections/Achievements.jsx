@@ -20,7 +20,7 @@ const Achievements = () => {
       subtitle:
         "Karnataka Common Entrance Test (KCET) – Engineering entrance examination",
       description:
-        "Secured an all-state rank of 320 in KCET 2022, enabling admission to top engineering colleges in Karnataka, reflecting consistent problem-solving, rigour, and exam discipline.",
+        "Secured an all-state rank of 320 in KCET 2022, enabling admission to top engineering colleges in Karnataka, reflecting consistent problem-solving, rigour, and discipline.",
       link: "https://www.geeksforgeeks.org/competitive-exam-experiences/my-2022-kcet-experience/",
       tag: "Academics • Competitive Exams",
     },
